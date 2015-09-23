@@ -1,0 +1,9 @@
+<div class="jumbotron">
+  <h1>BLOG TEST</h1>
+</div>
+
+<% @posts.each do |post| %>
+  <h3><%= post.title %></h3>
+  <p><%= post.content %></p>
+
+  <% end %>
