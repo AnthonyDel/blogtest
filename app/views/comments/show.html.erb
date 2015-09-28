@@ -1,11 +1,5 @@
-<div class="jumbotron">
-  <h1>Comments</h1>
-  <p></p>
-</div>
 
-
-
-<%= form_tag "/comments", method: "get" do %>
+<%= form_tag "/comments/", method: "post" do %>
   <p>Pseudo :<p>
   <input type="text" name="commenter"><br>
   <p>Votre commentaire :<p>

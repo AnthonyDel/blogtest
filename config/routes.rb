@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  get 'comments/create'
+  #post  'comments' => 'comments#create'
+  get 'posts/:id' => 'posts#show'
+  resources :comments
 
-  root 'pages#index'
+  root 'posts#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

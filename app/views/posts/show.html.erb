@@ -1,0 +1,14 @@
+<h1><%= @post.title %></h1>
+<p><%= @post.content %></p>
+<% @post.comments.each do |comment| %>
+  <p><%= comment.content %></p>
+<% end %>
+
+<%= form_tag "/comments", method: "post" do %>
+  <input type="hidden" name="post_id" value="<%= @post.id %>">
+  <p>Pseudo :<p>
+  <input type="text" name="commenter"><br>
+  <p>Votre commentaire :<p>
+  <input type="text" name="content"><br>
+  <input type="submit" value="Ajouter votre commentaire">
+<% end %>
